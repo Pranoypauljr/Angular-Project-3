@@ -1,0 +1,48 @@
+<!-- <div>
+  <button (click)="selectedButton='Button 1'">Button 1</button>
+  <button (click)="selectedButton='Button 2'">Button 2</button>
+  <button (click)="selectedButton='Button 3'">Button 3</button>
+  <app-multisel>
+    <ng-container description *ngIf="selectedButton == 'Button 1'">
+      <div>Description for Button 1.</div>
+    </ng-container>
+    <ng-container description *ngIf="selectedButton == 'Button 2'">
+      <div description>Description for Button 2.</div>
+    </ng-container>
+    <ng-container description *ngIf="selectedButton == 'Button 3'">
+      <div>Description for Button 3.</div>
+    </ng-container>
+  </app-multisel>
+</div> -->
+<form action="">
+  <app-multisel>
+    <ng-container formFields *ngIf="selectedField=='Name'">
+      <div class="name-sect">
+        <input type="text" placeholder="Name">
+      </div>
+    </ng-container>
+    <ng-container formFields *ngIf="selectedField=='Email'">
+      <div class="email-sect">
+        <input type="Email" placeholder="Email">
+      </div>
+    </ng-container>
+    <ng-container formFields *ngIf="selectedField=='Password'">
+      <div class="paswrd-sect">
+        <input type="password" placeholder="Password">
+      </div>
+    </ng-container>
+    <ng-container formFields *ngIf="selectedField=='Confirm'">
+      <div class="cpaswrd-sect">
+        <input type="password" placeholder="Confirm Password">
+      </div>
+    </ng-container>
+  </app-multisel>
+
+  <div class="btn-sect">
+    <button (click)="prevElem()">Prev</button>
+    <button (click)="nextElem()">Next</button>
+    <button>Submit</button>
+  </div>
+</form>
+
+
